@@ -1,1 +1,0 @@
-# java-Bean.github.io
