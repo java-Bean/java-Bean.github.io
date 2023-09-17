@@ -1,3 +1,5 @@
+/* === Global Styles === */
+
 /* Set the background image for the entire body */
 body {
   background-image: url('../images/rainystreet.jpg');
@@ -7,8 +9,14 @@ body {
   text-align: center;
 }
 
-/* Layout Styles */
+/* Hyperlink Styles */
+a, a:visited, a:hover, a:active {
+  color: cyan;
+}
 
+/* === Layout Styles === */
+
+/* Header Styles */
 header {
   text-align: center;
   padding: 20px;
@@ -19,10 +27,46 @@ header a {
   text-decoration: none;
 }
 
-nav {
-  margin: 20px;
+/* Navigation Styles */
+.navbar {
+  background-color: #333;  /* Dark gray background */
+  display: inline-block;  /* Make the container fit the content width */
+  font-size: 20px;  /* Explicitly set the font size */
+  line-height: 1.5;  /* Explicitly set the line height */
+  border-radius: 10px;
 }
 
+.nav-link {
+  box-sizing: border-box;
+  display: inline-block;  /* Display links inline */
+  color: cyan;  /* Text color */
+  text-align: center;
+  padding: 10px 20px;  /* Vertical and horizontal padding */
+  text-decoration: none;  /* Remove underline */
+  background-color: #333;  /* Default background color */
+  font-size: inherit;  /* Inherit font size from .navbar */
+  line-height: inherit;  /* Inherit line height from .navbar */
+}
+
+
+/* Add rounded corners to the first and last .nav-link */
+.nav-link:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.nav-link:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.nav-link:hover {
+  background-color: #000;  /* Dark black background on hover */
+  border-left: 5px solid #000;  /* Matches the hover background */
+  border-right: 5px solid #000;  
+}
+
+/* Footer Styles */
 footer {
   background-color: #131f209d;
   padding: 20px;
@@ -30,26 +74,14 @@ footer {
   border: 2px solid lightblue; /* This line adds a light blue border */
 }
 
-footer a {
+.plain-text-link, footer a {
   text-decoration: none;
-  margin: 0;
-}
-
-.plain-text-link {
   color: #d1dadc;
 }
 
-/* Component or Section Styles */
+/* === Component or Section Styles === */
 
-/* Keeps all hyperlinks blue */
-a,
-a:visited,
-a:hover,
-a:active {
-  color: cyan;
-}
-
-/* Grey textbox for body content */
+/* Content Box */
 #content-box {
   background-color: rgba(128, 128, 128, 0.799);
   padding: 20px;
@@ -59,6 +91,12 @@ a:active {
   border: 2px solid lightblue; /* This line adds a light blue border */
 }
 
+/* For larger content boxes */
+#large-content-box #content-box {
+  max-width: 1300px;
+}
+
+/* Main content area */
 main {
   text-align: center;
   padding: 20px;
@@ -69,8 +107,50 @@ main {
   align-items: center; 
 }
 
+/* List Items */
+.introductions-list ul li {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.introductions-list li > ul {
+  margin-top: 20px;
+}
+
+/* === Media & Images === */
+
+/* Image Cropper */
+.image-cropper {
+  width: 400px;  /* specify dimensions */
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-cropper img {
+  position: absolute;
+  left: 60px;  /* adjust these to move the image */
+  top: 0px;
+}
+
+
 .w3c-certifications img {
   border: 0;
   width: 88px;
   height: 31px;
+}
+
+/* Figure and Figcaption */
+figure {
+  display: block;
+  margin-top: -20px;  /* negative value to move it up */
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+figcaption {
+  font-style: italic;
 }
